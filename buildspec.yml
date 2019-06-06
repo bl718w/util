@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+    build:
+        commands:
+            - echo 'test codebuild artifact' > echo.txt
+artifacts:
+    files:
+        - 'echo.txt'
+    name: $(AWS_REGION)-$(date +%Y-%m-%d)
+
+
