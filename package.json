@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "version:prod:up": "if git-branch-is develop; then cd scripts && ./version.sh; fi",
   },
-  "pre-commit": {
-    "run": "precommit-msg"
+  "pre-push": {
+    "run": "version:prod:up"
   },
   "devDependencies": {
-    "pre-commit": "^1.1.3"
+    "git-branch-is": "^2.1.0",
+    "pre-push": "^0.1.1"
   }
 }
-
