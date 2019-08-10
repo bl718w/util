@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "version:prod:up": "if git-branch-is develop; then ./version.sh; fi"
+    "version:prod:up": "if git-branch-is master; then ./version.sh; fi"
   },
   "pre-push": {
     "run": "version:prod:up"
