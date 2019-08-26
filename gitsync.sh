@@ -2,7 +2,7 @@
 
 # setup
 mkdir -p ~/tmp/
-yes | cp environment_versions.txt /tmp/
+yes | cp environment_versions.txt ~/tmp/
 gitbranch=$(git branch | grep '*' | cut -d' ' -f2)
 
 # update master branch
