@@ -18,7 +18,7 @@ mkdir -p ~/tmp/
 yes | cp environment_versions.txt ~/tmp/
 for branch in dev qa uat master; do
    if [[ "$branch" = "$gitbranch" ]]; then
-      echo "The $branch is already updated."
+      echo "The $branch branch is already updated."
    else
       git checkout $branch
       yes | cp ~/tmp/environment_versions.txt .
