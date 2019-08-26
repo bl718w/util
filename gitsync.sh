@@ -12,7 +12,7 @@ git commit -m 'update dev branch'
 git push
 
 # update develop branch
-git checkout develop
+git checkout dev
 yes | cp /tmp/environment_versions.txt .
 git add environment_versions.txt
 git commit -m 'update environment_versions.txt'
